@@ -5,8 +5,6 @@ using UnityEngine;
 using UnityEngine.Networking;
 using System.Text;
 using System.Runtime.CompilerServices;
-using System.Threading;
-using System.Net;
 using System.Threading.Tasks;
 
 namespace DedicatingServerMatchMaker
