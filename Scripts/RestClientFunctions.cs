@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using DedicatingServerMatchMaker.Data;
 using Newtonsoft.Json;
 using UnityEngine;
@@ -36,7 +35,7 @@ namespace DedicatingServerMatchMaker
             };
         }
 
-        public static async Task<Result> GameServerReady(string url, string roomId, Dictionary<string, object> options)
+        public static async Task<Result> GameServerReady(string url, string roomId, GameServerOptions options)
         {
             UnityWebRequest req = await SendRequestAsync(url + "/game-server/ready/" + roomId, JsonConvert.SerializeObject(options));
             return new Result()
