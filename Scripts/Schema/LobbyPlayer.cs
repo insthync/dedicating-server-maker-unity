@@ -1,22 +1,20 @@
-using Colyseus.Schema;
-
-namespace DedicatingServerMatchMaker.Enums
+namespace DedicatingServerMatchMaker.Schema
 {
-    public class LobbyPlayer : Schema
+    public class LobbyPlayer : Colyseus.Schema.Schema
 	{
-		[Type(0, "string")]
+		[Colyseus.Schema.Type(0, "string")]
 		public string sessionId = string.Empty;
 
-		[Type(1, "string")]
+		[Colyseus.Schema.Type(1, "string")]
 		public string id = string.Empty;
 
-		[Type(2, "string")]
+		[Colyseus.Schema.Type(2, "string")]
 		public string name = string.Empty;
 
-		[Type(3, "uint8")]
+		[Colyseus.Schema.Type(3, "uint8")]
 		public byte team = 0;
 
-		[Type(4, "uint8")]
+		[Colyseus.Schema.Type(4, "uint8")]
 		public byte state = 0;
 	}
 }

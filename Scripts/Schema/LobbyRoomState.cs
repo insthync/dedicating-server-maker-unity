@@ -1,13 +1,11 @@
-using Colyseus.Schema;
-
-namespace DedicatingServerMatchMaker.Enums
+namespace DedicatingServerMatchMaker.Schema
 {
-    public class LobbyRoomState : Schema
+    public class LobbyRoomState : Colyseus.Schema.Schema
 	{
-		[Type(0, "map", typeof(MapSchema<LobbyPlayer>))]
-		public MapSchema<LobbyPlayer> players = new MapSchema<LobbyPlayer>();
+		[Colyseus.Schema.Type(0, "map", typeof(Colyseus.Schema.MapSchema<LobbyPlayer>))]
+		public Colyseus.Schema.MapSchema<LobbyPlayer> players = new Colyseus.Schema.MapSchema<LobbyPlayer>();
 
-		[Type(1, "string")]
+		[Colyseus.Schema.Type(1, "string")]
 		public string managerSessionId = string.Empty;
 	}
 }
