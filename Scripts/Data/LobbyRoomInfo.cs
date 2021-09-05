@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace DedicatingServerMatchMaker.Data
 {
     [System.Serializable]
